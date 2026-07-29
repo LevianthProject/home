@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-30T00:00:00+07:00",
+  "title": "Design System: Ghazariz — Systems Beyond Screens",
+  "extensions": {
+    "colorMeta": {
+      "chamber-black": {
+        "role": "neutral",
+        "displayName": "Chamber Black",
+        "canonical": "#050505",
+        "tonalRamp": ["#050505", "#111111", "#242424", "#3b3b3b", "#5d5d5d", "#858585", "#b8b8b8", "#eeeeee"]
+      },
+      "ultraviolet": {
+        "role": "primary",
+        "displayName": "Ultraviolet Edge Light",
+        "canonical": "#8b5cf6",
+        "tonalRamp": ["#19073f", "#2f0f71", "#4c1d95", "#6d35bd", "#8b5cf6", "#a78bfa", "#c4b5fd", "#ede9fe"]
+      },
+      "signal-white": {
+        "role": "neutral",
+        "displayName": "Warm Signal White",
+        "canonical": "#f4f4ef",
+        "tonalRamp": ["#181817", "#333331", "#555552", "#7d7d78", "#a4a49e", "#c9c9c2", "#e3e3dd", "#f4f4ef"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Architectural Display",
+        "purpose": "Hero, route titles, project titles, and decisive statements."
+      },
+      "body": {
+        "displayName": "Product Narrative",
+        "purpose": "Long-form evidence, metadata, and interface controls."
+      }
+    },
+    "shadows": [
+      {
+        "name": "structural-deep",
+        "value": "0 2.5rem 7.5rem rgba(0,0,0,0.62)",
+        "purpose": "Grounds major project media and overlay surfaces."
+      },
+      {
+        "name": "ultraviolet-reflection",
+        "value": "0 2rem 7rem rgba(91,33,182,0.20)",
+        "purpose": "Local reflected light around meaningful system cores."
+      }
+    ],
+    "motion": [
+      {
+        "name": "weighted-reveal",
+        "value": "cubic-bezier(0.16,1,0.3,1)",
+        "purpose": "Default deceleration for masks, menu, and state changes."
+      },
+      {
+        "name": "smooth-scroll",
+        "value": "1.05s exponential-out",
+        "purpose": "Lenis wheel and anchor motion; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "560px" },
+      { "name": "tablet", "value": "820px" },
+      { "name": "compact-desktop", "value": "1080px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Circular Arrow CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary directional action used in the hero.",
+      "html": "<a class=\"ds-arrow-cta\" href=\"#work\"><span>EXPLORE SELECTED WORK</span><b aria-hidden=\"true\">↘</b></a>",
+      "css": ".ds-arrow-cta{display:inline-flex;align-items:center;gap:14px;color:#f4f4ef;font:720 11px 'Manrope Variable',sans-serif;letter-spacing:.04em;text-decoration:none}.ds-arrow-cta b{display:grid;width:56px;height:56px;place-items:center;border:1px solid rgba(244,244,239,.28);border-radius:50%;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s}.ds-arrow-cta:hover b{transform:translate(3px,3px);background:rgba(139,92,246,.16)}.ds-arrow-cta:focus-visible{outline:2px solid #a78bfa;outline-offset:5px}"
+    },
+    {
+      "name": "Status Tag",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "Honest project-status label with intentionally quiet hierarchy.",
+      "html": "<span class=\"ds-status\">DEMO TESTING V1</span>",
+      "css": ".ds-status{display:inline-flex;align-items:center;padding:3px 11px;border:1px solid rgba(244,244,239,.14);border-radius:999px;background:#050505;color:#c9c8c2;font:600 10px 'Manrope Variable',sans-serif}"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Compact text-first navigation for the fixed chamber header.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#work\">Work</a><a href=\"#about\">About</a><a class=\"ds-nav-resume\" href=\"#resume\">Resume</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;background:#050505;color:#c9c8c2;font:630 12px 'Manrope Variable',sans-serif}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover,.ds-nav a:focus-visible{color:#f4f4ef}.ds-nav-resume{padding:8px 16px;border:1px solid rgba(244,244,239,.28);border-radius:999px}"
+    },
+    {
+      "name": "System Visualization",
+      "kind": "custom",
+      "description": "Sanitized technical field with an illuminated project core.",
+      "html": "<div class=\"ds-system\"><span class=\"ds-system-caption\">SANITIZED SYSTEM VIEW</span><b>MLS</b><i>Institution</i><i>Student</i></div>",
+      "css": ".ds-system{position:relative;display:grid;width:520px;height:340px;place-items:center;overflow:hidden;border-radius:12px;background:radial-gradient(circle at 55% 45%,rgba(139,92,246,.25),transparent 24%),#0d0d11;box-shadow:0 40px 120px rgba(0,0,0,.62);color:#f4f4ef}.ds-system>b{display:grid;width:112px;height:112px;place-items:center;border:1px solid #a78bfa;border-radius:50%;background:radial-gradient(circle at 34% 27%,#a78bfa,#4c1d95 30%,#050505 72%);font:720 16px 'Archivo Variable',sans-serif}.ds-system i{position:absolute;padding:10px 14px;border:1px solid rgba(244,244,239,.14);border-radius:10px;background:#121217;color:#c9c8c2;font:normal 10px 'Manrope Variable',sans-serif}.ds-system i:nth-of-type(1){top:22%;left:12%}.ds-system i:nth-of-type(2){right:12%;bottom:20%}.ds-system-caption{position:absolute;top:18px;left:18px;color:#9896a1;font:600 9px 'Manrope Variable',sans-serif;letter-spacing:.08em}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sculptural Systems Chamber",
+    "overview": "The portfolio behaves like a dark exhibition chamber built for product systems rather than objects. One black-violet sculpture carries the emotional weight while monumental language, technical notation, diagrams, and evidence reveal the work.",
+    "keyCharacteristics": [
+      "Near-black full-bleed architecture with localized ultraviolet illumination.",
+      "Dense grotesk display type and quiet readable body copy.",
+      "Strong asymmetry, authored line breaks, and changing scroll density.",
+      "Sanitized system diagrams with explicit project status.",
+      "Motion that remains legible when paused or reduced."
+    ],
+    "rules": [
+      {
+        "name": "The Reflected Light Rule",
+        "body": "Violet appears as light on material, a selected state, or a system path—never as a page-wide gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Authored Break Rule",
+        "body": "Display line breaks are composition and never left to accidental wrapping.",
+        "section": "typography"
+      },
+      {
+        "name": "The Grounded Surface Rule",
+        "body": "A surface earns elevation through interaction or narrative overlap.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do let one sculptural focal point dominate the opening.",
+      "Do alternate scale, density, motion, and quiet inside one grammar.",
+      "Do use local visuals, authored diagrams, explicit statuses, and truthful captions.",
+      "Do preserve native navigation and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't use the supplied reference screenshot as the production page.",
+      "Don't publish fake metrics, outcomes, dates, or concepts as shipped screens.",
+      "Don't use gradient text, ornamental glass, generic icon-card grids, or random neon.",
+      "Don't let smooth scrolling replace browser semantics."
+    ]
+  }
+}
