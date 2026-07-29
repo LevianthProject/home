@@ -1,0 +1,76 @@
+## Context
+
+Institutions and bootcamps often need classes, mentors, materials, assignments, evaluation, reporting, and payments without wanting to build and maintain a complete platform from scratch.
+
+MLS began as an internal learning and training system, then expanded into a broader multi-tenant product direction. The challenge was not simply adding features. It was deciding which business models could coexist, how user roles would work, what belonged in the first phase, and how the platform could grow without becoming too expensive or too complex too early.
+
+## The product problem
+
+The system needed to support several organizational models:
+
+- Institutions paying for a managed learning platform.
+- Bootcamp owners operating paid cohorts.
+- Future course creators who may eventually sell through a marketplace.
+- Students and members needing one coherent learning experience.
+- Mentors and administrators needing clear operational tools.
+
+That introduced tension across roles and permissions, payment models, content and video storage, realtime-class costs, institution customization, mentor capacity, and infrastructure scaling.
+
+## My responsibilities
+
+- Define and revise the product model.
+- Separate user types, responsibilities, and business flows.
+- Structure pricing hypotheses and phase boundaries.
+- Prepare product requirements and key route systems.
+- Evaluate realtime and media options.
+- Plan infrastructure scenarios and risks.
+- Connect MLS with internship and performance systems.
+
+## Key product decisions
+
+### Make PaaS the central direction
+
+MLS was positioned as a platform institutions and bootcamps could operate without building a complete learning system themselves.
+
+### Separate institution and bootcamp economics
+
+The documented institution direction used one monthly platform payment, with students not paying MLS directly. The leading hypothesis was Rp2,000,000 per month with unlimited users and constrained storage.
+
+The bootcamp direction allowed owners to control class pricing while MLS used a platform fee hypothesis of approximately Rp3,000,000 plus roughly three percent per member or transaction.
+
+These figures are historical product directions—not claims of current public pricing or achieved revenue.
+
+### Delay the marketplace when necessary
+
+A marketplace expands the product into checkout, reviews, instructor dashboards, content delivery, revenue share, moderation, and dispute handling. It remained a major future pillar, but not a requirement for proving the first credible version.
+
+### Keep phase one web-first
+
+The Virtual Academy idea included movement, voice chat, classrooms, whiteboards, and group activity. That ambition stayed outside the first phase so the core web platform could be tested first.
+
+### Scale from concurrency, not vanity numbers
+
+Realtime infrastructure was evaluated from simultaneous usage and session behavior—not total registered accounts. VideoSDK was considered for smaller-to-medium usage, while Cloudflare realtime technology was evaluated for higher-scale scenarios.
+
+## System scope
+
+The planned system covered authentication, role-based access, student and mentor dashboards, institution and bootcamp administration, classes, materials, video, assignments, quizzes, exams, progress, attendance, certificates, discussion, notifications, payment, reporting, multi-academy management, gamification, internship evaluation, live classes, and whiteboards.
+
+Marketplace and Virtual Academy capabilities remained future directions.
+
+## Progress and last-known status
+
+The known product history reached demo testing v1. The strongest outcome was a clearer direction:
+
+- Platform models were separated.
+- Major user and payment flows became explicit.
+- Pricing hypotheses were documented.
+- Web-first MVP boundaries were made credible.
+- Future phases were distinguished from shipped capability.
+- Infrastructure decisions could be discussed against real usage patterns.
+
+Target user counts, candidate institutions, future scale, and commercial hypotheses are not presented as achieved outcomes.
+
+## What I learned
+
+A platform becomes weaker when every valid idea is treated as an MVP requirement. The most important product work was not feature expansion; it was creating defensible boundaries between what MLS needed to prove first and what could become a future ecosystem.

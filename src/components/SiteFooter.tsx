@@ -1,0 +1,25 @@
+import { NoPrefetchLink as Link } from "@/components/NoPrefetchLink";
+import { ArrowUpRight } from "lucide-react";
+import { siteConfig } from "@/lib/site";
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div>
+        <p className="footer-kicker">Have a complex product problem?</p>
+        <a className="footer-email" href={`mailto:${siteConfig.email}`}>
+          {siteConfig.email}
+          <ArrowUpRight aria-hidden="true" />
+        </a>
+      </div>
+      <div className="footer-meta">
+        <p>Ghazariz · Product, design, technology, systems.</p>
+        <div>
+          <Link href="/work">Work</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+        </div>
+      </div>
+    </footer>
+  );
+}

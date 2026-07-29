@@ -1,35 +1,66 @@
-<p align="center">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif"> 
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif"> 
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
-</p>
+# Ghazariz — Systems Beyond Screens
 
-<p align="center">
-  <img width="10%" src="https://user-images.githubusercontent.com/74690464/141612037-afac1948-5ffe-4c62-96b0-0b7ee12c6f93.gif">
-  <img width="5%" src="https://user-images.githubusercontent.com/74690464/141611913-dea0ea27-eaf6-4ddc-a3cd-d8972e9f94da.gif">
-  <img width="20%" src="https://user-images.githubusercontent.com/74690464/141611927-0059ec60-0e48-4d27-bf7d-8c366369ff1d.png">
-  <img width="5%" src="https://user-images.githubusercontent.com/74690464/141611913-dea0ea27-eaf6-4ddc-a3cd-d8972e9f94da.gif">
-  <img width="10%" src="https://user-images.githubusercontent.com/74690464/141612037-afac1948-5ffe-4c62-96b0-0b7ee12c6f93.gif">
-</p>
+An immersive product-and-technology portfolio for Ghazariz, rebuilt from the original `LevianthProject/home` history.
 
-<p align="center">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif"> 
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif"> 
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
- <img width="8%" src="https://user-images.githubusercontent.com/74690464/141610642-84e8cdc7-76a0-4282-a4bd-d113e97fe29b.gif">
-</p>
+The site presents evidence-based work across product strategy, experience design, technical planning, and cross-functional execution. Its visual direction follows the supplied Direction 03 reference without using that screenshot as a production webpage.
+
+## Stack
+
+- Next.js App Router + React + TypeScript
+- Static export for GitHub Pages
+- GSAP for authored reveal and scroll-linked motion
+- Lenis for smooth wheel and anchor scrolling
+- CSS custom properties + CSS Modules-style global component classes
+- MDX for long-form case-study narratives
+- Locally bundled Archivo and Manrope variable fonts
+- Playwright + axe-core for route, visual, interaction, and accessibility QA
+- Impeccable UI skill and detector for design-system quality
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Verification
+
+```bash
+npm run lint
+npm run typecheck
+npm run check:assets
+npm run build
+```
+
+For browser QA, start the development server and run:
+
+```bash
+npm run test:e2e
+```
+
+The test uses the locally installed Chrome by default. Override `PORTFOLIO_URL`, `QA_OUT_DIR`, or `CHROME_PATH` when needed.
+
+## Static export and GitHub Pages
+
+`npm run build` creates `out/`. Production builds use the `/home` base path and trailing-slash routes so GitHub Pages can serve direct nested navigation.
+
+The workflow in `.github/workflows/deploy.yml` builds and deploys on pushes to `main`. In GitHub:
+
+1. Open **Settings → Pages**.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Push or merge the verified implementation to `main`.
+
+Production target: `https://levianthproject.github.io/home/`
+
+## Content requiring final verification
+
+- Resume PDF
+- LinkedIn and public GitHub profile URLs
+- Exact employment dates
+- Current MLS, ML Space, Museum CMS, Miniboard, and Museum Majapahit status
+- Approved project screenshots and collaborator credits
+- Permission for any company or partner logos
+
+Unverified values remain hidden or explicitly labeled in the public interface.

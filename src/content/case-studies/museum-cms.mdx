@@ -1,0 +1,71 @@
+## Context
+
+Three museum websites needed a shared way to publish dynamic blog and news content. The solution could not carelessly replace existing public websites, Workers, Pages projects, or domain routes.
+
+The product needed to centralize editorial operations while preserving the technical independence and visual identity of Museum Majapahit Bali, Glory of Islam Museum, and Indonesian Heritage Museum.
+
+## Constraints
+
+- Public websites remain React and TypeScript frontends.
+- Only selected content areas become dynamic.
+- Existing Workers and Pages projects cannot be overwritten.
+- There is no public registration.
+- Publishing requires approval.
+- Every public website requests content with its own `site_id`.
+- The first architecture avoids unnecessary VPS cost.
+
+## Product and architecture direction
+
+The chosen model was Cloudflare-native:
+
+1. A CMS admin frontend runs on Cloudflare Pages.
+2. A CMS API runs as a Cloudflare Worker.
+3. Content metadata and workflow state live in Cloudflare D1.
+4. Media files live in Cloudflare R2.
+5. Existing museum websites consume only approved, published content through the API.
+
+The architecture is additive. Shared content infrastructure joins the existing sites without replacing their public frontends.
+
+## Role model
+
+### `admin_writer`
+
+Writers create content, edit their own drafts, and submit work for review. They cannot approve or publish directly.
+
+### `superadmin`
+
+Superadmins review, approve, reject, publish, edit, delete, and manage content across sites. Account management can also belong to this role when required.
+
+## Editorial workflow
+
+The primary state path is:
+
+`draft → pending_review → approved → published`
+
+If a superadmin rejects an entry, it returns to a visible revision state:
+
+`rejected → author revision → pending_review`
+
+Public endpoints expose only published content. A prototype login demonstrated the flow but was never represented as production authentication.
+
+## Prototype scope
+
+The frontend-flow prototype covered login, museum selection, a portal dashboard, article creation and editing, title and slug, excerpt, Markdown body content, cover image, category, tags, draft and published states, a news-portal preview, returning to the site selector, and public visibility rules.
+
+## Key decision
+
+The safest architecture was additive rather than destructive. Converting every museum site into one new server-rendered product would increase migration risk and blur ownership. A central publishing API lets each website keep its own frontend while receiving governed content.
+
+## Progress and last-known status
+
+The work produced a centralized product model, two-role governance system, complete editorial workflow, Cloudflare-native architecture, resource and domain naming, security requirements, an interactive frontend-flow prototype, and explicit safeguards for existing deployments.
+
+Production deployment remains unverified. The portfolio therefore describes an architecture and prototype—not a live public CMS.
+
+## Trade-offs
+
+A central system reduces duplicated editorial operations, but it also becomes shared infrastructure that needs careful authorization, backups, auditability, and site isolation. A small initial role model is easier to govern, but may later need editors, reviewers, and site-scoped administrators.
+
+## What I learned
+
+Modernization does not require destructive migration. The strongest solution can be the one that introduces a reliable shared capability while preserving systems that already work.
