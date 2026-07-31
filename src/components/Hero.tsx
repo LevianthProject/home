@@ -13,12 +13,7 @@ const capabilities = [
 export function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero__ambient" aria-hidden="true" />
       <div className="hero__copy">
-        <p className="hero__role">
-          <span aria-hidden="true" />
-          Technical Product Manager · Product Designer
-        </p>
         <h1 id="hero-title" className="hero__title">
           <span className="hero__line">
             <span>Systems</span>

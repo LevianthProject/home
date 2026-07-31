@@ -7,6 +7,7 @@ import {
   Layers3,
   MoveRight
 } from "lucide-react";
+import { ExperienceTimeline } from "./ExperienceTimeline";
 import { SectionIntro } from "./SectionIntro";
 import { siteConfig } from "@/lib/site";
 
@@ -165,22 +166,9 @@ export function HomeSections() {
               product, and technology.
             </>
           }
-          copy="A concise snapshot. Exact public dates remain deliberately omitted until verified."
+          copy="The latest work appears first. Slide backward through the path that shaped it."
         />
-        <div className="experience-line">
-          {[
-            ["Product & Technology Leadership", "Minilemon ecosystem", "Product strategy, UX direction, infrastructure, teams, hiring, and cross-functional execution."],
-            ["Frontend Mentor", "Codepolitan / KelasFullstack ecosystem", "Frontend learning, technical guidance, and developer growth."],
-            ["Community Manager", "Developer education communities", "Communication, engagement, learning support, events, and member experience."]
-          ].map(([role, organization, detail]) => (
-            <article key={role} data-reveal>
-              <div className="experience-line__dot" aria-hidden="true" />
-              <p>{organization}</p>
-              <h3>{role}</h3>
-              <div>{detail}</div>
-            </article>
-          ))}
-        </div>
+        <ExperienceTimeline />
       </section>
 
       <section className="section about-preview">

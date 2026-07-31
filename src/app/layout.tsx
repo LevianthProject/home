@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { MotionController } from "@/components/MotionController";
+import { AmbientSilkBackground } from "@/components/AmbientSilkBackground";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>
+        <AmbientSilkBackground />
         <SmoothScroll />
         <MotionController />
         <SiteHeader />
