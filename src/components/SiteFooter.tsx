@@ -1,5 +1,5 @@
 import { NoPrefetchLink as Link } from "@/components/NoPrefetchLink";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
@@ -18,6 +18,14 @@ export function SiteFooter() {
           <Link href="/work">Work</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+          <a
+            className="footer-download"
+            href="/Muhammad_Ghazariz_Resume.pdf"
+            download
+          >
+            <Download aria-hidden="true" />
+            Download My Resume
+          </a>
         </div>
       </div>
     </footer>
