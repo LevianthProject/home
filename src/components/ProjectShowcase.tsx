@@ -8,7 +8,7 @@ export function ProjectShowcase() {
   return (
     <section id="selected-work" className="section selected-work">
       <SectionIntro
-        label="Selected work"
+        label="01 / Selected work"
         title={
           <>
             Selected systems,

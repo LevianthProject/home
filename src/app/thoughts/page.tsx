@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Thoughts & Experiments",
+  title: "Product & Technical Explorations",
   description:
-    "Product hypotheses, workflow explorations, and technical experiments by Ghazariz."
+    "Product hypotheses, workflow explorations, and technical experiments now connected to the Concept Lab."
 };
 
 const entries = [
@@ -19,17 +19,17 @@ export default function ThoughtsPage() {
   return (
     <>
       <PageHero
-        label="Thoughts & experiments"
+        label="Product & technical explorations"
         title={
           <>
-            Questions before
+            Explorations beside
             <br />
             expensive
             <br />
             products.
           </>
         }
-        copy="Not every idea should become a startup or production build. These entries document selected business-model questions, workflows, and technical explorations."
+        copy="These entries remain as product and technical explorations. Original experience concepts now live in the dedicated Concept Lab."
       />
       <section className="thoughts-index">
         {entries.map(([title, status, copy], index) => (

@@ -5,7 +5,7 @@ import { assetPath } from "@/lib/site";
 
 const capabilities = [
   ["Product strategy", "MVP, positioning, pricing, roadmap"],
-  ["System & UX design", "Roles, workflows, journeys, prototypes"],
+  ["Product & experience design", "Roles, workflows, concepts, journeys"],
   ["Technical planning", "Architecture, scope, infrastructure trade-offs"],
   ["Cross-functional leadership", "Product, technology, people, operations"]
 ];

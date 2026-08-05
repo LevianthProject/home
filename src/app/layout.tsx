@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Ghazariz — Technical Product Manager & Product Designer",
+    default: "Ghazariz — Product, Technology & Experience Designer",
     template: "%s — Ghazariz"
   },
   description: siteConfig.description,
@@ -56,7 +56,7 @@ export default function RootLayout({
     name: siteConfig.name,
     url: siteConfig.url,
     email: `mailto:${siteConfig.email}`,
-    jobTitle: "Technical Product Manager and Product Designer"
+    jobTitle: "Product, Technology and Experience Designer"
   };
 
   return (

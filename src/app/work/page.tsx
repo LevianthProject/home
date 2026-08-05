@@ -8,7 +8,7 @@ import { projects } from "@/content/projects";
 export const metadata: Metadata = {
   title: "Selected Work",
   description:
-    "Selected product systems across education, parental technology, museums, internal operations, and experiments."
+    "Selected product systems across education, parental technology, museums, internal operations, with a clear bridge into original concept work."
 };
 
 export default function WorkPage() {
@@ -28,6 +28,7 @@ export default function WorkPage() {
         copy="A portfolio of product strategy, experience design, technical planning, and operating-system decisions—not a gallery of disconnected screens."
       />
       <section className="work-index">
+        <div className="work-index__group-label">Product / system case studies</div>
         {projects.map((project, index) => (
           <article key={project.slug} data-reveal>
             <div className="work-index__meta">
@@ -54,6 +55,14 @@ export default function WorkPage() {
             </div>
           </article>
         ))}
+        <div className="work-bridge" data-reveal>
+          <p>Original ideation</p>
+          <h2>Some of my work begins before a product exists.</h2>
+          <span>Beyond products and systems, I also develop original concepts for interactive experiences, AI services, and creative technology.</span>
+          <Link className="text-link" href="/concepts">
+            Open Concept Lab <ArrowUpRight aria-hidden="true" />
+          </Link>
+        </div>
       </section>
     </>
   );

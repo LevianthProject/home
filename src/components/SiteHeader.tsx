@@ -6,9 +6,9 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { label: "Work", href: "/work" },
+  { label: "Concepts", href: "/concepts" },
   { label: "About", href: "/about" },
   { label: "Process", href: "/process" },
-  { label: "Thoughts", href: "/thoughts" },
   { label: "Contact", href: "/contact" }
 ];
 

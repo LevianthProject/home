@@ -60,6 +60,12 @@ export default function AboutPage() {
             each role needs, where value moves, which assumptions matter, what
             belongs in the MVP, and what documentation makes execution possible.
           </p>
+          <p>
+            I also work in the space before a product has a name or an
+            interface — researching possibilities, framing original concepts,
+            designing the interaction model, and turning the idea into
+            something stakeholders can understand and evaluate.
+          </p>
         </div>
       </section>
       <section className="principles-section">

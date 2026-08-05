@@ -5,7 +5,16 @@ import { siteConfig } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/work", "/about", "/process", "/thoughts", "/resume", "/contact"];
+  const routes = [
+    "",
+    "/work",
+    "/concepts",
+    "/about",
+    "/process",
+    "/thoughts",
+    "/resume",
+    "/contact"
+  ];
   const caseStudies = projects
     .filter((project) => project.hasCaseStudy)
     .map((project) => `/work/${project.slug}`);

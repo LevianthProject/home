@@ -19,7 +19,13 @@ const skills = [
   "Technical architecture planning",
   "Cross-functional leadership",
   "Remote-team operations",
-  "AI-assisted product development"
+  "AI-assisted product development",
+  "Original Product Ideation",
+  "Interactive Experience Design",
+  "Creative Technology Concepts",
+  "Physical-Digital Product Thinking",
+  "Stakeholder Proposal Development",
+  "Experience Architecture"
 ];
 
 export default function ResumePage() {
@@ -55,6 +61,13 @@ export default function ResumePage() {
           <a className="text-link" href={`mailto:${siteConfig.email}?subject=Resume request`}>
             Request the verified resume <ArrowUpRight aria-hidden="true" />
           </a>
+        </div>
+        <div className="resume-concepts">
+          <p className="section-kicker">Selected original concepts</p>
+          <p>
+            AutoReveal Xperience · AutoForge AR · AutoCanvas Experience Studio ·
+            Interactive Smart Table · MiraServe AI · VITALIS Care Mirror AI
+          </p>
         </div>
         <div className="resume-skills">
           <p className="section-kicker">Core skills</p>

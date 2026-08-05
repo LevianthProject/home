@@ -1,61 +1,78 @@
-# Portfolio Design & Production QA
+# Design QA — Concept Lab Extension
 
-## Scope
+## Direction
 
-- Direction: supplied Direction 03 reference and the “Sculptural Systems Chamber” contract.
-- Routes: Home, Work, three full case studies, About, Process, Thoughts, Resume, and Contact.
-- Target: Next.js static export served from the GitHub Pages base path `/home`.
-- Viewports: desktop `1440 × 900` and mobile `390 × 844`.
+Direction 03 — Experimental / Bold preserved throughout.
 
-## Impeccable review
+## Homepage
 
-- The Impeccable context pass established `PRODUCT.md`, `DESIGN.md`, and the primary surface brief.
-- The manual detector ran exactly once after the UI was complete.
-- Its layout-animation warning was fixed by replacing a `width` transition with `transform: scaleX()`.
-- Its monospace warning was resolved by documenting the code type stack.
-- Fluid type endpoints, deep-violet tonal values, and precision radii were documented as intentional design-system roles.
-- The finish reviewer found one material issue: mobile-overlay focus containment. The menu now traps `Tab`/`Shift+Tab`, focuses its first link on open, closes with `Escape`, and restores focus to the toggle.
-- Final Impeccable result: no remaining material fix.
+- [x] Concept Lab preview section (`02 / ORIGINAL IDEATION`) present
+- [x] Shows exactly four signature concepts (AutoReveal, AutoForge AR, AutoCanvas, Smart Table)
+- [x] Section labels renumbered consistently (02, 03, 04, 05, 06, 07, 08)
+- [x] No fake metrics or outcome claims
+- [x] Violet illumination, black negative space, large typography consistent with Direction 03
 
-## Browser evidence
+## `/concepts` Route
 
-Production QA ran against `http://127.0.0.1:3002/home`, which mirrors the deployed base path.
+- [x] Hero with correct eyebrow, heading, intro, metadata
+- [x] Eight selected public concepts displayed
+- [x] Automotive Experience R&D archive block present
+- [x] `How I Ideate` 6-step methodology present
+- [x] Product & Technical Explorations section present
+- [x] All concepts use `publicDetailLevel: "summary-only"`
+- [x] No confidential proposal copy exposed
 
-- All 10 tested routes returned `200`.
-- Every route had exactly one `h1`.
-- No horizontal overflow.
-- No broken images.
-- No console or page errors.
-- Smooth wheel scrolling moved from `0` to `668`.
-- Smooth anchor scrolling moved beyond `720`.
-- Mobile menu opened and closed correctly.
-- Initial mobile-menu focus landed on `/home/work/`.
-- Focus wrapping reached `/home/resume/`.
-- `Escape` restored focus to the menu toggle.
-- Axe WCAG 2 A/AA, 2.1 AA, and 2.2 AA: zero violations.
+## Navigation
 
-Artifacts:
+- [x] `Concepts` link present, routes to `/concepts`
+- [x] Mobile navigation functional
+- [x] No overcrowded nav bar
 
-- `portfolio-production-qa/hero-desktop.png`
-- `portfolio-production-qa/home-desktop.png`
-- `portfolio-production-qa/home-mobile.png`
-- `portfolio-production-qa/report.json`
+## `/work` Page
 
-## Build and security gates
+- [x] Bridge to Concept Lab present
+- [x] Product case studies and proposal-stage concepts visually separated
+- [x] Correct CTA: "Open Concept Lab"
 
-- `npm run lint`: passed.
-- `npm run typecheck`: passed.
-- `npm run check:assets`: passed, 3 required assets.
-- `npm run build`: passed, 15 static pages generated.
-- `git diff --check`: passed.
-- `npm audit --omit=dev`: 0 vulnerabilities.
-- Remaining full-audit advisories are confined to the ESLint development dependency graph and are not shipped in the static site.
+## About Page
 
-## Truth and content controls
+- [x] Ideation paragraph added after existing positioning
+- [x] Product and technology leadership remains core positioning
 
-- Sanitized diagrams are explicitly labeled.
-- Unverified dates, metrics, public links, and project statuses are omitted or marked for confirmation.
-- The supplied reference remains a design reference and is never shipped as the webpage.
-- Resume PDF, exact career dates, approved project screenshots, final profile links, and logo permissions remain user-supplied content inputs.
+## Resume Page
 
-final result: passed
+- [x] Ideation/experience-design skills included
+- [x] Selected Original Concepts subsection present
+- [x] No client names listed beside concepts
+
+## IP Compliance
+
+- [x] No Toyota/Veloz/Hilux branding in public concept summaries
+- [x] No private proposal files deployed
+- [x] No budget/risk/architecture details from proposal sources exposed
+- [x] Every concept has truthful proposal/R&D status
+- [x] No "first in Indonesia" claims
+- [x] No fake client logos
+
+## Visual Consistency
+
+- [x] Black / white / controlled violet visual language maintained
+- [x] Existing product case studies preserved
+- [x] No colorful Behance-style grid for concepts
+- [x] Large editorial/experimental rows for concept index
+
+## Responsive
+
+- [x] Desktop layout functional
+- [x] Mobile Concept Lab usable without hover
+- [x] Reduced-motion behavior works
+
+## Accessibility
+
+- [x] `prefers-reduced-motion` respected
+- [x] Proper ARIA labels on interactive elements
+- [x] Focus management in mobile menu
+
+---
+
+**final result: passed**

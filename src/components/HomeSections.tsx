@@ -10,6 +10,7 @@ import {
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { SectionIntro } from "./SectionIntro";
 import { siteConfig } from "@/lib/site";
+import { ConceptLabPreview } from "@/components/concepts/ConceptLabPreview";
 
 const processSteps = [
   ["Find the real problem", "Start from operational reality, user friction, and business constraints."],
@@ -28,7 +29,14 @@ const capabilityGroups = [
   {
     icon: Layers3,
     title: "Product & experience",
-    items: ["Information architecture", "User journeys", "Role systems", "Workflow design", "Prototypes"]
+    items: [
+      "UX & workflow design",
+      "Original ideation",
+      "Experience architecture",
+      "Physical-digital interaction",
+      "Creative technology concepts",
+      "Prototype direction"
+    ]
   },
   {
     icon: Braces,
@@ -52,12 +60,14 @@ const experiments = [
 export function HomeSections() {
   return (
     <>
+      <ConceptLabPreview />
+
       <section className="section positioning">
         <div className="positioning__marker" data-drift aria-hidden="true">
           SYSTEM
         </div>
         <p className="section-kicker" data-reveal>
-          Positioning
+          03 / Positioning
         </p>
         <h2 data-reveal>
           I do not only design interfaces.
@@ -105,7 +115,7 @@ export function HomeSections() {
 
       <section className="section process-section">
         <SectionIntro
-          label="Process"
+          label="04 / Process"
           title={
             <>
               Reduce ambiguity
@@ -130,7 +140,7 @@ export function HomeSections() {
 
       <section className="section capabilities-section">
         <SectionIntro
-          label="Capabilities"
+          label="05 / Capabilities"
           title={
             <>
               Strategy to system.
@@ -158,7 +168,7 @@ export function HomeSections() {
 
       <section className="section experience-section">
         <SectionIntro
-          label="Experience"
+          label="06 / Experience"
           title={
             <>
               Across community,
@@ -173,7 +183,7 @@ export function HomeSections() {
 
       <section className="section about-preview">
         <div data-reveal>
-          <p className="section-kicker">About</p>
+          <p className="section-kicker">07 / About</p>
           <h2>
             Between the whiteboard
             <br />
@@ -199,7 +209,7 @@ export function HomeSections() {
 
       <section className="section thoughts-preview">
         <SectionIntro
-          label="Thoughts & experiments"
+          label="08 / Experiments & research"
           title={
             <>
               Where assumptions
@@ -220,8 +230,8 @@ export function HomeSections() {
             </article>
           ))}
         </div>
-        <Link className="index-link" href="/thoughts">
-          View all experiments <ArrowUpRight aria-hidden="true" />
+        <Link className="index-link" href="/concepts#explorations">
+          View product explorations <ArrowUpRight aria-hidden="true" />
         </Link>
       </section>
 
