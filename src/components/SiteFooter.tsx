@@ -16,6 +16,8 @@ export function SiteFooter() {
         <p>Ghazariz · Product, design, technology, systems.</p>
         <div>
           <Link href="/work">Work</Link>
+          <Link href="/concepts">Concepts</Link>
+          <Link href="/products">Products</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <a

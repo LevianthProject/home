@@ -66,6 +66,11 @@ export default function AboutPage() {
             designing the interaction model, and turning the idea into
             something stakeholders can understand and evaluate.
           </p>
+          <p>
+            Alongside product and technology work, I also build independent
+            digital products — taking them from problem framing and design
+            through packaging and distribution.
+          </p>
         </div>
       </section>
       <section className="principles-section">
