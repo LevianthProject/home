@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 const navigation = [
   { label: "Work", href: "/work" },
   { label: "Concepts", href: "/concepts" },
+  { label: "Products", href: "/products" },
   { label: "About", href: "/about" },
-  { label: "Process", href: "/process" },
   { label: "Contact", href: "/contact" }
 ];
 

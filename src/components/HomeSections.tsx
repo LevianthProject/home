@@ -11,6 +11,7 @@ import { ExperienceTimeline } from "./ExperienceTimeline";
 import { SectionIntro } from "./SectionIntro";
 import { siteConfig } from "@/lib/site";
 import { ConceptLabPreview } from "@/components/concepts/ConceptLabPreview";
+import { ProductsPreview } from "@/components/products/ProductsPreview";
 
 const processSteps = [
   ["Find the real problem", "Start from operational reality, user friction, and business constraints."],
@@ -32,6 +33,8 @@ const capabilityGroups = [
     items: [
       "UX & workflow design",
       "Original ideation",
+      "Independent product building",
+      "Digital product packaging",
       "Experience architecture",
       "Physical-digital interaction",
       "Creative technology concepts",
@@ -61,13 +64,14 @@ export function HomeSections() {
   return (
     <>
       <ConceptLabPreview />
+      <ProductsPreview />
 
       <section className="section positioning">
         <div className="positioning__marker" data-drift aria-hidden="true">
           SYSTEM
         </div>
         <p className="section-kicker" data-reveal>
-          03 / Positioning
+          04 / Positioning
         </p>
         <h2 data-reveal>
           I do not only design interfaces.
@@ -115,7 +119,7 @@ export function HomeSections() {
 
       <section className="section process-section">
         <SectionIntro
-          label="04 / Process"
+          label="05 / Process"
           title={
             <>
               Reduce ambiguity
@@ -140,7 +144,7 @@ export function HomeSections() {
 
       <section className="section capabilities-section">
         <SectionIntro
-          label="05 / Capabilities"
+          label="06 / Capabilities"
           title={
             <>
               Strategy to system.
@@ -168,7 +172,7 @@ export function HomeSections() {
 
       <section className="section experience-section">
         <SectionIntro
-          label="06 / Experience"
+          label="07 / Experience"
           title={
             <>
               Across community,
@@ -183,7 +187,7 @@ export function HomeSections() {
 
       <section className="section about-preview">
         <div data-reveal>
-          <p className="section-kicker">07 / About</p>
+          <p className="section-kicker">08 / About</p>
           <h2>
             Between the whiteboard
             <br />
@@ -209,7 +213,7 @@ export function HomeSections() {
 
       <section className="section thoughts-preview">
         <SectionIntro
-          label="08 / Experiments & research"
+          label="09 / Experiments & research"
           title={
             <>
               Where assumptions
